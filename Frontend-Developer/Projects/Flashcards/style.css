@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap");
+
+body {
+  text-align: center;
+  background-image: url("/world.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 25px;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  color: #325153;
+  font-size: 22px;
+}
+
+.quiz-area {
+  width: 20rem;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 3px;
+  width: 6rem;
+  height: 6rem;
+  transition: all 0.75s linear;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.front {
+  background-color: #f9eee5;
+  z-index: 2;
+  backface-visibility: hidden;
+}
+
+.question {
+  font-family: "Oswald", sans-serif;
+  color: #f88b34;
+}
+
+.back {
+  background-color: #f88b34;
+  z-index: 1;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.answer {
+  font-family: "Oswald", sans-serif;
+  color: #f9eee5;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.container:hover .card {
+  transform: rotateY(180deg);
+}
