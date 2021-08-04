@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Open Space</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Space section -->
+    <div class="space">
+        <!-- Planet area section -->
+        <div class="planet-area">
+            <img src="img/rocket.png" class="rocket" id="rocket">
+            <img src="img/mars.png" class="planet">
+        </div>
+
+        <!-- Control panel section -->
+        <div class="control-panel">
+            <div class="control-panel__inner">
+
+                <input type="password" id="password" placeholder="Enter password to unlock">
+                <input type="button" value="OK" id="unlock-button" />
+
+                <div class="check-buttons">
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                    <input class="check-button" type="checkbox" onchange="readyToLaunch()" disabled />
+                </div>
+
+                <div class="levers">
+                    <input class="lever" type="range" max="100" orient="vertical" onchange="readyToLaunch()" disabled />
+                    <input class="lever" type="range" max="100" orient="vertical" onchange="readyToLaunch()" disabled />
+                    <input class="lever" type="range" max="100" orient="vertical" onchange="readyToLaunch()" disabled />
+                    <input class="lever" type="range" max="100" orient="vertical" onchange="readyToLaunch()" disabled />
+                    <input class="lever" type="range" max="100" orient="vertical" onchange="readyToLaunch()" disabled />
+                </div>
+
+                <input type="button" value="Launch" id="launch-button" disabled />
+            </div>
+        </div>
+    </div>
+
+    <!-- Script section -->
+    <script src="main.js"></script>
+</body>
+
+</html>

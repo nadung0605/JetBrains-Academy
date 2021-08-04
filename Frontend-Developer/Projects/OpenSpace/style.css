@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.space {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url(img/space.png);
+}
+
+.planet-area {
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.rocket {
+  width: 150px;
+  position: absolute;
+  left: 200px;
+  bottom: 200px;
+  transform: rotate(25deg);
+}
+
+.planet {
+  width: 400px;
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+}
+
+.control-panel {
+  width: 27%;
+  position: absolute;
+  right: 280px;
+  bottom: 150px;
+  padding: 15px;
+  background-color: yellow;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    black 20px,
+    black 36px
+  );
+}
+
+.control-panel__inner {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #252424;
+}
+
+#password {
+  width: 55%;
+  padding: 5px;
+  outline: none;
+  color: yellow;
+  font-size: 18px;
+  margin-left: 14%;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid yellow;
+}
+
+#unlock-button {
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 8px;
+  background-color: yellow;
+}
+
+.check-buttons {
+  width: 80%;
+  display: flex;
+  margin-top: 30px;
+  margin-left: 35px;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 1 1 auto;
+}
+
+.levers {
+  width: 85%;
+  display: flex;
+  margin: 20px 0 20px 26px;
+}
+
+input[type="range"] {
+  width: 8px;
+  height: 80px;
+  padding: 0 5px;
+  flex: 1 1 auto;
+  -webkit-appearance: slider-vertical;
+}
+
+#launch-button {
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 39%;
+  padding: 15px 10px;
+  border-radius: 50%;
+  background-color: red;
+  border: 1px solid white;
+}
+
+#launch-button[disabled] {
+  cursor: initial;
+  color: darkgray;
+  border-color: darkgray;
+  background-color: rgb(179, 11, 11);
+}
