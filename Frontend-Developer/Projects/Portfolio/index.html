@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="home">
+        <!-- Nav bar -->
+        <nav>
+            <ul class="hamburger">
+                <li class="menu-item"><a onclick="activeMenuItem(event.target)" href="#about">About me</a></li>
+                <li class="menu-item"><a onclick="activeMenuItem(event.target)" href="#portfolio">Portfolio</a></li>
+                <li class="menu-item"><a onclick="activeMenuItem(event.target)" href="#contacts">Contacts</a></li>
+                <li class="menu-item" id="default-item"><a onclick="activeMenuItem(event.target)" href="#home">Home</a></li>
+            </ul>
+            <div class="menu" id="menu">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </nav>
+        <h1>Jane Doe,<br>Front-end developer</h1>
+    </header>
+
+    <!-- About me section -->
+    <section id="about">
+        <div class="container">
+            <div class="image">
+                <img src="images/image.jpg" alt="My workspace" id="workspace">
+                <img src="images/person.jpeg" alt="My image" id="avatar">
+            </div>
+            <div class="text-container">
+                <div class="text">
+                    <h2>About me</h2>
+                    <p>
+                        Hi, I'm Jane Doe. I've been a junior front-end developer for 5 months now.<br>
+                        For me, programming is not just a job, it's a hobby.<br>
+                        I'm open to new knowledge, I like to study new technologies and apply them in practice.<br>
+                        <strong>Skills: </strong>HTML, CSS, JS, React.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Porfolio section -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="image">
+                <div class="project1">
+                    <img src="images/project1.png" alt="Flashcards project">
+                    <button class="open-window">Open</button>
+                    <p>Flash Cards</p>
+                </div>
+                <div class="project2">
+                    <img src="images/project2.png" alt="Virtual Piano project">
+                    <button class="open-window">Open</button>
+                    <p>Virtual Piano</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts section -->
+    <section id="contacts">
+        <div class="container">
+            <h2>Contacts</h2>
+            <p>
+                You can contact me at <a href="mailto:test@hyperskill.org">test@hyperskill.org</a>
+            </p>
+            <p>
+                or phone number - <a href="tel:+1234567890">1234567890</a>
+            </p>
+            <div class="link">
+                <a href="#"><img src="images/github.svg" alt="Github link"></a>
+                <a href="#"><img src="images/facebook.svg" alt="Facebook link"></a>
+                <a href="#"><img src="images/twitter.svg" alt="Twitter link"></a>
+                <a href="#"><img src="images/instagram.svg" alt="Instagram link"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="name">Jane Doe</p>
+        <p class="year">2020</p>
+    </footer>
+
+    <!-- Pop-up window -->
+    <div id="pop-up">
+        <div class="window">
+            <h1></h1>
+            <p class="link">
+                You can see the project at the following link: 
+                <a href="#"></a>
+            </p>
+            <p class="description">
+                I did this project when I was studying the frontend on 
+                Hyperskill. I created a webpage with flip-down flash 
+                cards, learned some HTML basics and learned that css
+                can easily make a beautiful design.
+            </p>
+            <button id="close">Close</button>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="main.js"></script>
+</body>
+
+</html>

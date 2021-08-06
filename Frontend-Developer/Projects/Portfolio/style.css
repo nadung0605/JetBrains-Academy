@@ -1,0 +1,451 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 95vw;
+}
+
+/* Header */
+header {
+  height: 100vh;
+  background-image: url(images/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #1e0f11;
+}
+
+ul {
+  width: 45%;
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+}
+
+ul li {
+  flex: 1 1 auto;
+}
+
+ul li a {
+  width: 100%;
+  color: grey;
+  line-height: 60px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+ul li.active {
+  background-color: lightgrey;
+}
+
+ul li.active a {
+  color: #1e0f11;
+}
+
+ul li:hover {
+  background-color: lightgrey;
+}
+
+ul li:hover a {
+  color: #1e0f11;
+}
+
+.menu {
+  z-index: 8;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu > div {
+  height: 5px;
+  width: 100%;
+  transition: 0.4s;
+  background-color: white;
+}
+
+.menu.change .bar1 {
+  transform: rotate(-45deg) translate(-8px, 16px);
+}
+
+.menu.change .bar2 {
+  opacity: 0;
+}
+
+.menu.change .bar3 {
+  transform: rotate(45deg) translate(-9px, -17px);
+}
+
+header h1 {
+  color: lightgrey;
+  position: absolute;
+  left: 15%;
+  bottom: 30%;
+}
+
+/* About me section */
+#about {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  background-color: #cbd2d2;
+}
+
+#about .container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding: 140px 80px 80px 80px;
+}
+
+#about .container > div {
+  flex: 1 1 auto;
+}
+
+#about .container .image {
+  position: relative;
+}
+
+#about .container .image #workspace {
+  width: 90%;
+  height: 90%;
+}
+
+#about .container .image #avatar {
+  width: 50%;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+}
+
+#about .container .text-container {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about .container .text-container .text {
+  width: 85%;
+}
+
+#about .container .text-container .text h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  padding: 0 0 30px 20px;
+}
+
+/* Porfolio section */
+#portfolio {
+  height: fit-content;
+  position: relative;
+  background-color: #f3f5f9;
+}
+
+#portfolio .container {
+  padding: 80px;
+  position: relative;
+}
+
+#portfolio .container h2 {
+  line-height: 3;
+  text-align: center;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+#portfolio .container .image {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+#portfolio .container .image div {
+  position: relative;
+}
+
+#portfolio .container .image .project1 img {
+  width: 99%;
+  height: 100%;
+}
+
+#portfolio .container .image .project2 img {
+  width: 100%;
+  height: 100%;
+}
+
+#portfolio .container .image div button {
+  border: none;
+  padding: 10px;
+  display: none;
+  color: grey;
+  cursor: pointer;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  border-radius: 10px;
+  text-transform: uppercase;
+  background-color: #1e0f11;
+}
+
+#portfolio .container .image div button:hover {
+  color: #1e0f11;
+  background-color: lightgrey;
+}
+
+#portfolio .container .image .project1 button {
+  left: 44%;
+}
+
+#portfolio .container .image .project2 button {
+  left: 47%;
+}
+
+#portfolio .container .image div:hover img {
+  opacity: 0.4;
+}
+
+#portfolio .container .image div:hover button {
+  display: block;
+  animation: animate 0.5s;
+}
+
+@keyframes animate {
+  from {
+    top: 45%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+#portfolio .container .image div p {
+  left: 43%;
+  color: #1e0f11;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* Contacts section */
+#contacts .container {
+  padding: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#contacts .container h2 {
+  line-height: 2;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+#contacts .container p {
+  line-height: 1.5;
+}
+
+#contacts .container .link {
+  margin-top: 20px;
+}
+
+#contacts .container .link a {
+  margin-left: 10px;
+}
+
+/* Footer */
+footer {
+  height: 20vh;
+  background-color: #1e0f11;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .name {
+  color: white;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+footer .year {
+  color: grey;
+}
+
+/* Pop-up window */
+#pop-up {
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#pop-up .window {
+  width: 40%;
+  color: grey;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 30%;
+  height: fit-content;
+  border-radius: 10px;
+  animation: pop-up 1s;
+  border: 5px solid black;
+  background-color: white;
+}
+
+@keyframes pop-up {
+  from {
+    top: 20%;
+    opacity: 0;
+  }
+  to {
+    top: 30%;
+    opacity: 1;
+  }
+}
+
+#pop-up .window h1 {
+  font-weight: normal;
+  padding-bottom: 20px;
+  color: lightslategrey;
+}
+
+#pop-up .window .link {
+  padding-bottom: 15px;
+}
+
+#pop-up .window .description {
+  text-align: center;
+}
+
+#pop-up .window #close {
+  border: none;
+  color: grey;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  border-radius: 4px;
+  padding: 10px 15px;
+  background-color: #1e0f11;
+}
+
+#pop-up .window #close:hover {
+  color: #1e0f11;
+  background-color: lightgrey;
+}
+
+/* Responsive web */
+@media screen and (min-height: 1000px) {
+  #about {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  ul {
+    width: 100%;
+    height: 100vh;
+    padding: 0 80px;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  ul li {
+    flex: 0 0 auto;
+    width: 80%;
+  }
+
+  ul li:hover {
+    background-color: lightgrey;
+  }
+
+  ul li:hover a {
+    color: #1e0f11;
+  }
+
+  header nav .menu {
+    display: flex;
+    align-self: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* About me section */
+  #about {
+    height: fit-content;
+  }
+
+  #about .container {
+    flex-direction: column;
+  }
+
+  #about .container .image #workspace {
+    display: none;
+  }
+
+  #about .container .image #avatar {
+    width: 100%;
+    position: relative;
+    right: 0;
+  }
+
+  #about .container .text-container .text {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  /* Portfolio section */
+  #portfolio .container .image {
+    flex-direction: column;
+  }
+
+  #portfolio .container .image .project1 img {
+    width: 100%;
+  }
+
+  #portfolio .container .image .project2 button {
+    left: 44%;
+  }
+
+  #portfolio .container .image div p {
+    left: 39%;
+  }
+
+  /* Contacts section */
+  #contacts .container {
+    font-size: 20px;
+  }
+}
