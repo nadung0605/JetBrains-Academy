@@ -1,0 +1,149 @@
+/* Minesweeper */
+.minesweeper {
+  width: 235px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: -5px -5px 7px #61181b, -5px 5px 7px #61181b, 5px -5px 7px #61181b,
+    5px 5px 7px #61181b;
+}
+
+/* Control panel */
+.control-panel {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.title-row {
+  height: 40px;
+}
+
+.title {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 22px;
+  height: 22px;
+  margin-left: 12px;
+  animation: logo 10s infinite linear;
+}
+
+@keyframes logo {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.control-row {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  color: lightgrey;
+}
+
+.flag-counter {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.flag-counter::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url(../images/flag.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reset-button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-left: -10px;
+  cursor: pointer;
+  background-color: transparent;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.reset-button.waiting {
+  background-image: url(../images/smiling-face.png);
+}
+
+.reset-button.running {
+  background-image: url(../images/grinning-face.png);
+}
+
+.reset-button.over {
+  background-image: url(../images/dizzy-face.png);
+}
+
+.reset-button.won {
+  background-image: url(../images/party-face.png);
+}
+
+/* Field */
+.field {
+  width: 100%;
+  height: 265px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 25px;
+  text-align: center;
+  color: lightgrey;
+  margin: 0 5px 5px 0;
+  background-color: black;
+}
+
+.cell:nth-child(8n) {
+  margin-right: 0;
+}
+
+.cell.opened {
+  border-radius: 2px;
+  background-color: transparent;
+  box-shadow: 0 0 1px 3px #801317;
+}
+
+.cell.fired {
+  border-radius: 2px;
+  background-color: red;
+  background-image: url(../images/fired.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cell.target {
+  border-radius: 2px;
+  background-image: url(../images/target.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1px 3px #801317;
+}
